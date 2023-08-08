@@ -1,4 +1,4 @@
-﻿@model LabM.Models.StudentCollegeVM
+﻿@model Laboratory.Models.RequestVM
 @{
 }
 @if (ViewBag.ErrorMessage is not null)
@@ -34,9 +34,9 @@
         </div>
         <div class="form-group col">
             <label asp-for="Request.College" class="control-label"></label>
-            <select asp-for="Request.College" asp-items="@Model.CollegeSelectList" class="form-select">
+            @*<select asp-for="Request.College" asp-items="@Model.CollegeSelectList" class="form-select">
                 <option></option>
-            </select>
+            </select>*@
             <span asp-validation-for="Request.College" class="text-danger"></span>
         </div>
     </div>
@@ -107,14 +107,14 @@
         </div>
         <div class="row">
             <div class="form-group col">
-                <label asp-for="Request.ResidenceIdName" class="control-label"></label>
+                <label asp-for="Request.NationalOrResidenceIdFile" class="control-label"></label>
                 <input type="file" name="ResidenceIdName" class="form-control" />
-                <span asp-validation-for="Request.ResidenceIdName" class="text-danger"></span>
+                <span asp-validation-for="Request.NationalOrResidenceIdFile" class="text-danger"></span>
             </div>
             <div class="form-group col">
-                <label asp-for="Request.StudentIdName" class="control-label"></label>
+                <label asp-for="Request.CopyOfStudentId" class="control-label"></label>
                 <input type="file" name="StudentIdName" class="form-control" />
-                <span asp-validation-for="Request.StudentIdName" class="text-danger"></span>
+                <span asp-validation-for="Request.CopyOfStudentId" class="text-danger"></span>
             </div>
         </div>
     </div>
@@ -127,7 +127,7 @@
     </div>
     <div class="row">
         <div class="form-group col">
-            <select class="form-control" asp-for="Request.Date">
+            <select class="form-control" asp-for="Request.TestDate">
                 @if (Model.AvilableDates is not null)
                 {
                     var avilableDates = (List<DateTime>)Model.AvilableDates;

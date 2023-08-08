@@ -66,8 +66,8 @@ namespace Laboratory.Controllers
         }
 
         // GET: Requests/Create
-        public IActionResult Create()
-        {
+        //public IActionResult Create()
+        //{
             //StudentCollegeVM studentCollegeVM = new StudentCollegeVM();
             //var colleges = _context.College.ToList();
             //studentCollegeVM.CollegeSelectList = new SelectList(colleges, "Name", "Name");
@@ -97,15 +97,15 @@ namespace Laboratory.Controllers
             //}
             //studentCollegeVM.AvilableDates = avilableDates;
             //return View(studentCollegeVM);
-        }
+        //}
 
         // POST: Requests/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NationalOrResidenceId,UniversityNumber,StudentsStatus,College,FirstNameEnglish,FatherNameEnglish,GrandFatherNameEnglish,FamilyNameEnglish,FirstNameArabic,FatherNameArabic,GrandFatherNameArabic,FamilyNameArabic,Email,PhoneNo,BirthDate,MedicalFileNo,TestDate,NationalOrResidenceIdFile,CopyOfStudentId")] Request request)
-        {
+        //public async Task<IActionResult> Create([Bind("Id,NationalOrResidenceId,UniversityNumber,StudentsStatus,College,FirstNameEnglish,FatherNameEnglish,GrandFatherNameEnglish,FamilyNameEnglish,FirstNameArabic,FatherNameArabic,GrandFatherNameArabic,FamilyNameArabic,Email,PhoneNo,BirthDate,MedicalFileNo,TestDate,NationalOrResidenceIdFile,CopyOfStudentId")] Request request)
+        //{
             //StudentCollegeVM studentCollegeVM = new StudentCollegeVM();
             //studentCollegeVM.Request = request;
             //var colleges = _context.College.ToList();
@@ -151,7 +151,7 @@ namespace Laboratory.Controllers
             //    return RedirectToAction("Message");
             //}
             //return View(studentCollegeVM);
-        }
+        //}
 
         //GET: Messages for Success
         public IActionResult Message()
